@@ -6,9 +6,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Subrayada:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="./loginPageStyle.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="http://fatcat-designs.com/dead_messages/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="http://fatcat-designs.com/dead_messages/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="http://fatcat-designs.com/dead_messages/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/dead_messages/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/dead_messages/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/dead_messages/favicon-16x16.png">
   <link rel="manifest" href="/dead_messages/site.webmanifest">
 </head>
 <body>
@@ -70,7 +70,13 @@
         
       <div class="page" id="page2">
         <?php 
-          include "http://fatcat-designs.com/dead_messages/connect.php";
+          $link = mysqli_connect("localhost", "xexus_karmicRet", "fuckOffHackers", "xexus_farrago");
+            if($link === false) {
+              die("ERROR: Could not connect. " . mysqli_connect_error() . "<p>");
+            }
+            else {
+              echo ""; 
+            }
 
           $sql = "SELECT * FROM CS_logins ORDER BY entry DESC LIMIT 1";
             if($result = mysqli_query($link, $sql)){

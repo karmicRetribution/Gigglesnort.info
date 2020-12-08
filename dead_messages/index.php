@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="http://fatcat-designs.com/dead_messages/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="http://fatcat-designs.com/dead_messages/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="http://fatcat-designs.com/dead_messages/favicon-16x16.png">
-  <link rel="manifest" href="http://fatcat-designs.com/dead_messages/site.webmanifest">
+  <link rel="manifest" href="/dead_messages/site.webmanifest">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="./style.css">
 
@@ -19,13 +19,13 @@
   
   <div id="logo">
     <section id="logoBack">
-      <img id="Farrago" src="http://fatcat-designs.com/images/FarragoFuture%20Logo.png" alt="Farrago Fiction logo" width="95%">
+      <img id="Farrago" src="/images/FarragoFuture%20Logo.png" alt="Farrago Fiction logo" width="95%">
     </section>
   </div>
   
   <div id="deptLogo">
     <section id="deptBack">
-      <img id="NSCS" src="http://fatcat-designs.com/images/Narrative%20Stability%20Customer%20Support%20Stacked.png" alt="Narrative Stability Customer Support" width="87.5%">
+      <img id="NSCS" src="/images/Narrative%20Stability%20Customer%20Support%20Stacked.png" alt="Narrative Stability Customer Support" width="87.5%">
     </section>
   </div>
   

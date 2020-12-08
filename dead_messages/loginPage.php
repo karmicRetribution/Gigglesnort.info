@@ -185,7 +185,7 @@
         </p></div>
         <button class="prev" type="button" onclick="minusGlitch(); return false">Back</button>
       </div>
-      <iframe name="hiddenIframe" width="50%" height="100" style="border:none;"></iframe>
+      <iframe name="hiddenIframe" width="50%" height="100" style="display:none;"></iframe>
     </main>
 
   </div>

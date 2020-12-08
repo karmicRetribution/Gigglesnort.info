@@ -485,7 +485,7 @@
           <p class="introOutro">Thank you for completing this questionnaire. If the support team has any questions, we will contact you for follow-up.</p>
           <p class="introOutro">FFNS CS: <span class="introOutro" id="log"></span></p>
           <input type="hidden" name="logNumber" value="" id="hiddenlog">
-          <iframe name="hiddenIframe" width="50%" height="100" style="border:none;"></iframe>
+          <iframe name="hiddenIframe" width="50%" height="100" style="display:none;"></iframe>
           <button class="prev" type="reset" onclick="addGlitch(); return false">Back</button>
       </div>
     </form>

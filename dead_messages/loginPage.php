@@ -18,13 +18,13 @@
     
     <div id="logo">
       <section id="logoBack">
-        <img id="Farrago" src="/images/FarragoFuture%20Logo.png" alt="Farrago Fiction logo" width="95%">
+        <img id="Farrago" src="/images/FarragoFuture_Logo.png" alt="Farrago Fiction logo" width="95%">
       </section>
     </div>
     
     <div id="deptLogo">
       <section id="deptBack">
-        <img id="NSCS" src="/images/Narrative%20Stability%20Customer%20Support%20Stacked.png" alt="Narrative Stability Customer Support" width="87.5%">
+        <img id="NSCS" src="/images/Narrative_Stability_Customer%20_Support_Logo.png" alt="Narrative Stability Customer Support" width="87.5%">
       </section>
     </div>
     

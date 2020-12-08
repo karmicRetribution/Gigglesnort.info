@@ -48,7 +48,7 @@ body {
   left: 2vw;
   height: 96vh;
   width: 96vw;
-  background-image: url(http://fatcat-designs.com/images/green-grid2.svg);
+  background-image: url(/images/green-grid2.svg);
   background-size: 40px;
   border-color: rgba(120, 192, 67, 0.5);
   box-shadow: 0 0 1rem 0.01rem rgba(120, 192, 67, 0.5) inset;
@@ -396,7 +396,7 @@ input[type=text], input[type=number] {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: var(--purple);
-  background: url(http://fatcat-designs.com/images/static%20tile.png);
+  background: url(/images/static%20tile.png);
 }
 
 input::-webkit-input-placeholder {

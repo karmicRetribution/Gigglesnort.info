@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <title>Farrago Fiction Narrative Stability Customer Support</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Subrayada:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="apple-touch-icon" sizes="180x180" href="http://fatcat-designs.com/dead_messages/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="http://fatcat-designs.com/dead_messages/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="http://fatcat-designs.com/dead_messages/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/dead_messages/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/dead_messages/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/dead_messages/favicon-16x16.png">
   <link rel="manifest" href="/dead_messages/site.webmanifest">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="./style.css">

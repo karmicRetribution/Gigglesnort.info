@@ -319,7 +319,7 @@ td {
   color: var(--green);
 }
 tbody tr:nth-child(odd) {
-  background: url(/images/static%20tile.png);
+  background: url(/images/static_tile.png);
 }
 .tablewrap {
   overflow-x: auto;
@@ -750,7 +750,7 @@ input[type=text], input[type=number] {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: var(--purple);
-  background: url(/images/static%20tile.png);
+  background: url(/images/static_tile.png);
 }
 
 input::-webkit-input-placeholder {

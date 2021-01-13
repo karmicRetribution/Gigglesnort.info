@@ -158,3 +158,13 @@ particlesJS ("headContent",
 // it scales really really ugly, so: //
 
 window.addEventListener('resize', particlesJS);
+
+// SeerOfVoid and other URL appendices //
+
+function htmlTag () {
+  var urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get("seerOfVoid") == "true") {
+    document.documentElement.setAttribute("data-seerOf", "void");
+  }
+}
+window.addEventListener('load', htmlTag);

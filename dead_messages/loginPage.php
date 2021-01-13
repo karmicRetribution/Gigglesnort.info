@@ -65,6 +65,10 @@
             </p><br>
             <button type="submit" id="submit" class="submit-button" onclick="addGlitch()">Log In</button>
           </fieldset>
+          <span class="void"><br><br>Why are there 9 fucking logins in a row from the same user. Is someone seriously trying to hack the employee login? Or is this some idiot working from home?<br>
+            Wait.<br>
+            Did.... did they actually enter &quot;************&quot; as their password???<br>
+            <i>ahahahaahahahahahhaahahhaahah....</i></span>
         </div>
       </form>
         

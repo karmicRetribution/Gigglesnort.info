@@ -85,7 +85,6 @@ body {
 
 /* ----Specific Text Sections---- */
 .void {
-  display: none;
   color: var(--purple);
 }
 

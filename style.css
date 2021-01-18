@@ -13,7 +13,7 @@ html:not([data-seerOf=void]) .void {
 body {
   background: #000000;
   font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--green);
 }
 
@@ -23,7 +23,7 @@ body {
   left: 2vw;
   height: 96vh;
   width: 96vw;
-  background-image: url(/images/green-grid2.svg);
+  background-image: url(http://fatcat-designs.com/images/green-grid2.svg);
   background-size: 40px;
   border-color: rgba(120, 192, 67, 0.75);
   box-shadow: 0 0 1rem 0.01rem rgba(120, 192, 67, 0.75) inset;
@@ -88,6 +88,21 @@ body {
   color: var(--purple);
 }
 
+a:link {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--purple);
+  text-decoration: none;
+}
+
 /* ----All Buttons---- */
 button {
   position: relative;
@@ -98,17 +113,14 @@ button {
   border-radius: 5px 5px 5px 5px;
   box-shadow: 0 0 0.5rem 0.1rem rgba(120, 192, 67, 0.5);
   color: var(--blue);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
   text-align: center;
   text-decoration: none;
   line-height: 1;
   margin-top: 1rem;
   cursor: pointer;
-  -webkit-transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
-  transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
   transition: background 250ms ease-in-out, transform 150ms ease;
-  transition: background 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
 }
 
 button::-moz-selection {
@@ -177,8 +189,7 @@ button:active {
 
 @-webkit-keyframes glitch-anim-text {
   0% {
-    -webkit-transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
-            transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
+    transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
     -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
     clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
   }
@@ -211,12 +222,10 @@ button:active {
     clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
   }
   9.9% {
-    -webkit-transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
-            transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
+    transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
   }
   10%, 100% {
-    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-            transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
@@ -224,8 +233,7 @@ button:active {
 
 @keyframes glitch-anim-text {
   0% {
-    -webkit-transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
-            transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
+    transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
     -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
     clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
   }
@@ -258,12 +266,10 @@ button:active {
     clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
   }
   9.9% {
-    -webkit-transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
-            transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
+    transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
   }
   10%, 100% {
-    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-            transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }

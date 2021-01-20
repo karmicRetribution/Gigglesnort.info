@@ -134,11 +134,6 @@ button::selection {
   color: #000000;
 }
 
-button::-moz-selection {
-  background: var(--blue);
-  color: #000000;
-}
-
 button:hover,
 button:focus {
   background: rgba(84, 77, 86, 0.25);

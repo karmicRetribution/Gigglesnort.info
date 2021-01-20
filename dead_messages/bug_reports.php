@@ -50,7 +50,7 @@
         <p class="introOutro">Please see below for unusual bug reports that were revceived thru the user site.</p>
         <p><div class="tablewrap" id="reportTable"> 
           <?php 
-            $link = mysqli_connect("localhost", "xexus_karmicRet", "fuckOffHackers", "xexus_farrago");
+            $link = mysqli_connect("gator1370.hostgator.com", "xexus_karmicRet", "fuckOffHackers", "xexus_farrago");
               if($link === false) {
                die("ERROR: Could not connect. " . mysqli_connect_error() . "<p>");
               }

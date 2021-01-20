@@ -341,6 +341,55 @@ a {
   color: #000000;
 }
 
+/* ----Tables---- */
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  box-shadow: 0 0 0.5rem 0.1rem rgba(120, 192, 67, 0.5);
+}
+th, td {
+  border-width: 0.5px;
+  border-color: var(--green);
+  border-style: solid;
+  padding: 0.25rem;
+  max-width: 60rem;
+}
+th {
+  text-align: left;
+  color: var(--blue);
+  white-space: nowrap;
+}
+th::selection {
+  background: var(--green);
+  color: #000000;
+}
+th::-moz-selection {
+  background: var(--green);
+  color: #000000;
+}
+
+td {
+  color: var(--green);
+}
+td::selection {
+  background: var(--blue);
+  color: #000000;
+}
+td::-moz-selection {
+  background: var(--blue);
+  color: #000000;
+}
+
+tbody tr:nth-child(odd) {
+  background: url(/images/static_tile.png);
+}
+.tablewrap {
+  overflow-x: auto;
+}
+.columnUnWrap {
+  white-space: nowrap;
+}
+
 /* ----Scrollbars---- */
 .side::-webkit-scrollbar {
   width: 0.25rem;

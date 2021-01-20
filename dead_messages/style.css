@@ -294,11 +294,6 @@ a {
   color: #000000;
 }
 
-.sideContent::-moz-selection {
-  background: var(--green);
-  color: #000000;
-}
-
 .question {
   margin-top: 2rem;
 }
@@ -317,7 +312,17 @@ a {
   color: #000000;
 }
 
-.introOutro::-moz-selection {
+.error {
+  line-height: 1.5rem;
+  color: var(--purple);
+}
+
+.error::-moz-selection {
+  background: var(--blue);
+  color: #000000;
+}
+
+.error::selection {
   background: var(--blue);
   color: #000000;
 }
@@ -326,31 +331,41 @@ a {
   color: var(--purple);
 }
 
+.void::-moz-selection {
+  background: var(--blue);
+  color: #000000;
+}
+
+.void::selection {
+  background: var(--blue);
+  color: #000000;
+}
+
 /* ----Scrollbars---- */
 .side::-webkit-scrollbar {
   width: 0.25rem;
 }
 
-.page::-webkit-scrollbar {
+.page::-webkit-scrollbar, textarea::-webkit-scrollbar {
   width: 0.75rem;
 }
 
-.side, .page {
+.side, .page, textarea {
   overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-color: var(--green) var(--scrollbarBG1);
 }
 
-.side::-webkit-scrollbar-track, .page::-webkit-scrollbar-track {
+.side::-webkit-scrollbar-track, .page::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track {
   margin: 1px;
   background: var(--scrollbarBG1);
 }
 
-.side::-webkit-scrollbar-corner, .page::-webkit-scrollbar-corner {
+.side::-webkit-scrollbar-corner, .page::-webkit-scrollbar-corner, textarea::-webkit-scrollbar-corner {
   background: var(--scrollbarBG1);
 }
 
-.side::-webkit-scrollbar-thumb, .page::-webkit-scrollbar-thumb {
+.side::-webkit-scrollbar-thumb, .page::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb {
   background-color: var(--green);
   border-radius: 6px;
 }
@@ -361,6 +376,10 @@ a {
 
 .page::-webkit-scrollbar-thumb {
   border: 0.25rem solid var(--scrollbarBG2);
+}
+
+textarea::-webkit-scrollbar-thumb {
+  border: 1px solid var(--scrollbarBG1);
 }
 
 /* ----Text Form Controls---- */
@@ -383,7 +402,7 @@ a {
   color: #000000;
 }
 
-input[type=text], input[type=number] {
+input[type=text], input[type=number], textarea {
   width: 80%;
   padding: 0.5rem;
   border-color: var(--green);
@@ -398,32 +417,27 @@ input[type=text], input[type=number] {
   background: url(/images/static_tile.png);
 }
 
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-family: 'Montserrat', sans-serif;
   color: rgba(66, 200, 244, 0.75);
 }
 
-input::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   font-family: 'Montserrat', sans-serif;
   color: rgba(66, 200, 244, 0.75);
 }
 
-input:-ms-input-placeholder {
+input:-ms-input-placeholder, textarea::-ms-input-placeholder {
   font-family: 'Montserrat', sans-serif;
   color: rgba(66, 200, 244, 0.75);
 }
 
-input::-ms-input-placeholder {
+input::placeholder, textarea::placeholder {
   font-family: 'Montserrat', sans-serif;
   color: rgba(66, 200, 244, 0.75);
 }
 
-input::placeholder {
-  font-family: 'Montserrat', sans-serif;
-  color: rgba(66, 200, 244, 0.75);
-}
-
-input::-moz-selection {
+input::-moz-selection, textarea::-moz-selection {
   background: var(--green);
   color: #000000;
 }
@@ -433,9 +447,14 @@ input::selection {
   color: #000000;
 }
 
-input::-moz-selection {
+input::-moz-selection, textarea::selection {
   background: var(--green);
   color: #000000;
+}
+
+#bugText {
+  height: 20rem;
+  resize: none;
 }
 
 /* ----Checkbox Form Controls---- */
@@ -511,11 +530,6 @@ input[type="checkbox"]:checked::before {
 }
 
 .radio-label::selection {
-  background: var(--blue);
-  color: #000000;
-}
-
-.radio-label::-moz-selection {
   background: var(--blue);
   color: #000000;
 }
@@ -609,11 +623,6 @@ button::selection {
   color: #000000;
 }
 
-button::-moz-selection {
-  background: var(--blue);
-  color: #000000;
-}
-
 button:hover,
 button:focus {
   background: rgba(84, 77, 86, 0.25);
@@ -645,6 +654,11 @@ button:active {
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
   float: right;
+}
+
+.job {
+  margin-top: 0.5rem;
+  float: left;
 }
 
 /* ----Glitch Transition Animations---- */

@@ -41,6 +41,14 @@ function minusGlitch() {
   }, 500);
 }
 
+function prettyGlitch() {
+  var gltch = document.getElementById('glitchArea');
+  gltch.classList.add('glitchAnimate');
+  setTimeout(function() {
+    gltch.classList.remove('glitchAnimate');
+  }, 500);
+}
+
 // Fancy Header //
 
 particlesJS ("headContent", 

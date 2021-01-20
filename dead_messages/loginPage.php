@@ -12,7 +12,6 @@
   <link rel="manifest" href="/dead_messages/site.webmanifest">
 </head>
 <body>
-<!-- partial:index.partial.html -->
   <div id="backGrid"></div>
   <div id="gridContainer">
     
@@ -65,10 +64,6 @@
             </p><br>
             <button type="submit" id="submit" class="submit-button" onclick="addGlitch()">Log In</button>
           </fieldset>
-          <span class="void"><br><br>Why are there 9 fucking logins in a row from the same user. Is someone seriously trying to hack the employee login? Or is this some idiot working from home?<br>
-            Wait.<br>
-            Did.... did they actually enter &quot;************&quot; as their password???<br>
-            <i>ahahahaahahahahahhaahahhaahah....</i></span>
         </div>
       </form>
         
@@ -106,8 +101,8 @@
           <p class="introOutro">
             <button class="job" type="button" onclick="">Go</button>
             <br>&nbsp; Assigned Tickets<br>
-            <button class="job" type="button" onclick="">Go</button>
-            <br>&nbsp; Unassigned Pool<br>
+            <button class="job" type="button" onclick="prettyGlitch(); location.href='/dead_messages/bug_reports.php';">Go</button>
+            <br><strong>&nbsp; Unassigned Pool</strong><br>
             <button class="job" type="button" onclick="">Go</button>
             <br>&nbsp; Special Projects<br>
             <button class="job" type="button" onclick="">Go</button>
@@ -135,43 +130,43 @@
             if(mysqli_num_rows($result) > 0){
               echo "<table>";
               echo "<tr>";
-                echo "<th>Log Number</th>";
-                echo "<th>Session ID</th>";
-                echo "<th>Messenger Program</th>";
-                echo "<th>User Chathandle</th>";
-                echo "<th>Dead Player Chathandle</th>";
-                echo "<th>How well User knew them</th>";
-                echo "<th>How User felt towards them</th>";
-                echo "<th>How they felt towards User</th>";
-                echo "<th>Last convo before death</th>";
-                echo "<th>Type of Romantic Relationship</th>";
-                echo "<th>Trove Description</th>";
-                echo "<th>Hand Description</th>";
-                echo "<th>Other Description</th>";
-                echo "<th>Conversation after death</th>";
-                echo "<th>Any unusual tone</th>";
-                echo "<th>Was User aware of death</th>";
-                echo "<th>Visible Glitches</th>";
+                echo "<th class='column'>Log Number</th>";
+                echo "<th class='columnUnWrap'>Session ID</th>";
+                echo "<th class='columnUnWrap'>Messenger Program</th>";
+                echo "<th class='columnUnWrap'>User Chathandle</th>";
+                echo "<th class='columnUnWrap'>Dead Player Chathandle</th>";
+                echo "<th class='columnUnWrap'>How well User knew them</th>";
+                echo "<th class='columnUnWrap'>How User felt towards them</th>";
+                echo "<th class='columnUnWrap'>How they felt towards User</th>";
+                echo "<th class='columnUnWrap'>Last convo before death</th>";
+                echo "<th class='columnUnWrap'>Type of Romantic Relationship</th>";
+                echo "<th class='column'>Trove Description</th>";
+                echo "<th class='column'>Hand Description</th>";
+                echo "<th class='column'>Other Description</th>";
+                echo "<th class='columnUnWrap'>Conversation after death</th>";
+                echo "<th class='columnUnWrap'>Any unusual tone</th>";
+                echo "<th class='columnUnWrap'>Was User aware of death</th>";
+                echo "<th class='columnUnWrap'>Visible Glitches</th>";
               echo "</tr>";
             while($row = mysqli_fetch_array($result)){
               echo "<tr>";
                 echo "<td style='color:#AA6DA3;'>" . $row['logNumber'] . "</td>";
-                echo "<td>" . $row['sessionID'] . "</td>";
-                echo "<td>" . $row['messenger'] . "</td>";
-                echo "<td>" . $row['chathandle'] . "</td>";
-                echo "<td>" . $row['deadPlayer'] . "</td>";
-                echo "<td>" . $row['personalKnowledge'] . "</td>";
-                echo "<td>" . $row['personalFeelings'] . "</td>";
-                echo "<td>" . $row['theirFeelings'] . "</td>";
-                echo "<td>" . $row['lastConversation'] . "</td>";
-                echo "<td>" . $row['romance'] . "</td>";
-                echo "<td>" . $row['troveDescription'] . "</td>";
-                echo "<td>" . $row['handDescription'] . "</td>";
-                echo "<td>" . $row['otherDescription'] . "</td>";
-                echo "<td>" . $row['deadConversation'] . "</td>";
-                echo "<td>" . $row['unusual'] . "</td>";
-                echo "<td>" . $row['alreadyDead'] . "</td>";
-                echo "<td>" . $row['glitches'] . "</td>";
+                echo "<td class='columnUnWrap'>" . htmlspecialchars($row['sessionID']) . "</td>";
+                echo "<td class='columnUnWrap'>" . htmlspecialchars($row['messenger']) . "</td>";
+                echo "<td class='columnUnWrap'>" . htmlspecialchars($row['chathandle']) . "</td>";
+                echo "<td class='columnUnWrap'>" . htmlspecialchars($row['deadPlayer']) . "</td>";
+                echo "<td class='columnUnWrap'>" . htmlspecialchars($row['personalKnowledge']) . "</td>";
+                echo "<td class='columnUnWrap'>" . htmlspecialchars($row['personalFeelings']) . "</td>";
+                echo "<td class='columnUnWrap'>" . htmlspecialchars($row['theirFeelings']) . "</td>";
+                echo "<td class='columnUnWrap'>" . htmlspecialchars($row['lastConversation']) . "</td>";
+                echo "<td class='columnUnWrap'>" . htmlspecialchars($row['romance']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['troveDescription']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['handDescription']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['otherDescription']) . "</td>";
+                echo "<td class='columnUnWrap'>" . htmlspecialchars($row['deadConversation']) . "</td>";
+                echo "<td class='columnUnWrap'>" . htmlspecialchars($row['unusual']) . "</td>";
+                echo "<td class='columnUnWrap'>" . htmlspecialchars($row['alreadyDead']) . "</td>";
+                echo "<td class='columnUnWrap'>" . $row['glitches'] . "</td>";
               echo "</tr>";
             }
               echo "</table>";
@@ -195,11 +190,9 @@
   </div>
    
 <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
-  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
-  </script>
-<!-- partial -->
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-  <script  src="./loginPageScript.js"></script>
+  <script src="./loginPageScript.js"></script>
 
 </body>
 </html>

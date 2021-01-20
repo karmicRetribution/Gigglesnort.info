@@ -28,7 +28,7 @@
     
     <div id="deptLogo">
       <section id="deptBack">
-        <img id="NSCS" src="/images/Narrative_Stability_Customer_Support_Stacked.png" alt="Narrative Stability Customer Support" width="87.5%">
+        <img id="NSCS" src="/images/Narrative_Stability_Customer%20_Support_Logo.png" alt="Narrative Stability Customer Support" width="87.5%">
       </section>
     </div>
     

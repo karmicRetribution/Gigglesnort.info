@@ -301,6 +301,7 @@ a {
 
 /* ----Tables---- */
 table {
+  table-layout: fixed;
   border-collapse: collapse;
   box-shadow: 0 0 0.5rem 0.1rem rgba(120, 192, 67, 0.5);
 }
@@ -309,19 +310,42 @@ th, td {
   border-color: var(--green);
   border-style: solid;
   padding: 0.25rem;
-  white-space: nowrap;
+  max-width: 60rem;
 }
 th {
+  text-align: left;
   color: var(--blue);
+  white-space: nowrap;
 }
+th::selection {
+  background: var(--green);
+  color: #000000;
+}
+th::-moz-selection {
+  background: var(--green);
+  color: #000000;
+}
+
 td {
   color: var(--green);
 }
+td::selection {
+  background: var(--blue);
+  color: #000000;
+}
+td::-moz-selection {
+  background: var(--blue);
+  color: #000000;
+}
+
 tbody tr:nth-child(odd) {
   background: url(/images/static_tile.png);
 }
 .tablewrap {
   overflow-x: auto;
+}
+.columnUnWrap {
+  white-space: nowrap;
 }
 
 /* ----Scrollbars---- */
@@ -732,11 +756,6 @@ input[type="radio"]:checked ~ .reveal-if-active {
   color: #000000;
 }
 
-.textbox-label::-moz-selection {
-  background: var(--blue);
-  color: #000000;
-}
-
 input[type=text], input[type=number] {
   width: 80%;
   padding: 0.5rem;
@@ -762,11 +781,6 @@ input::-moz-placeholder {
   color: rgba(66, 200, 244, 0.75);
 }
 
-input:-ms-input-placeholder {
-  font-family: 'Montserrat', sans-serif;
-  color: rgba(66, 200, 244, 0.75);
-}
-
 input::-ms-input-placeholder {
   font-family: 'Montserrat', sans-serif;
   color: rgba(66, 200, 244, 0.75);
@@ -783,11 +797,6 @@ input::-moz-selection {
 }
 
 input::selection {
-  background: var(--green);
-  color: #000000;
-}
-
-input::-moz-selection {
   background: var(--green);
   color: #000000;
 }

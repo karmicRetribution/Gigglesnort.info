@@ -184,8 +184,8 @@ particlesJS ("headContent",
 } 
 );
 // it scales really really ugly, so: //
+window.onresize = particlesJS;
 
-window.addEventListener('resize', particlesJS);
 
 // SeerOfVoid and other URL appendices //
 
@@ -197,8 +197,10 @@ function htmlTag () {
 }
 window.addEventListener('load', htmlTag);
 
+
 // There are many ways to pick a DOM node; here we get the form itself and the input
 // box, as well as the span element into which we will place the error message.
+
 const form  = document.getElementsByTagName('form')[0];
 const sessionID = document.getElementById('sessionID');
 const messenger = document.getElementById('messenger');

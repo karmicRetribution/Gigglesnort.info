@@ -19,7 +19,7 @@
   
   <div id="logo">
     <section id="logoBack">
-      <img id="Farrago" src="/images/FarragoFuture_Logo.png" alt="Farrago Fiction logo" width="95%">
+      <a href="http://www.gigglesnort.info/"><img id="Farrago" src="/images/FarragoFuture_Logo.png" alt="Farrago Fiction logo" width="95%"></a>
     </section>
   </div>
   

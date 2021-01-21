@@ -12,13 +12,13 @@
   <link rel="manifest" href="/dead_messages/site.webmanifest">
 </head>
 <body>
-<!-- partial:index.partial.html -->
+
   <div id="backGrid"></div>
   <div id="gridContainer">
     
     <div id="logo">
       <section id="logoBack">
-        <img id="Farrago" src="/images/FarragoFuture_Logo.png" alt="Farrago Fiction logo" width="95%">
+        <a href="http://www.gigglesnort.info/"><img id="Farrago" src="/images/FarragoFuture_Logo.png" alt="Farrago Fiction logo" width="95%"></a>
       </section>
     </div>
     
@@ -97,9 +97,7 @@
   </div>
    
 <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
-  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
-  </script>
-<!-- partial -->
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
   <script  src="./script.js"></script>
 

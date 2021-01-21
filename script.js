@@ -141,8 +141,8 @@ particlesJS ("particleWeb",
 } 
 );
 // it scales really really ugly, so: //
+window.onresize = particlesJS;
 
-window.addEventListener('resize', particlesJS);
 
 // SeerOfVoid and other URL appendices //
 

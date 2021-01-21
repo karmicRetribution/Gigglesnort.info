@@ -41,66 +41,72 @@ body {
 
 /* ---Grid---- */
 .grid-container {
-  position: fixed;
-  top: 2.5vh;
-  left: 2.5vw;
-  width: 95vw;
-  height: 95vh;
-  display: grid;
-  grid-template-columns: auto 50% auto;
-  grid-template-rows: auto auto auto auto auto;
+    position: fixed;
+    top: 2.5vh;
+    left: 2.5vw;
+    width: 95vw;
+    height: 95vh;
+    display: grid;
+  grid-template-columns: 1fr 50% 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
 }
 
 /* ----Logos---- */
 #logo {
-  width: 80%;
   grid-column: 2;
   grid-row: 2;
+  grid-gap: 2rem;
   align-self: center;
   justify-self: center;
+  max-width: 90vw;
 }
 
 #Farrago {
-  padding: 0.3rem;
+  --ratio: 704 / 1819;
+  --container-height: 100vh;
+  display: block;
+  width: calc(150vw * var(--ratio));
+  max-width: calc(var(--container-height) * var(--ratio) * 1.25);
+  height: 100%;
+  max-height: var(--container-height);
 }
 
 #deptLogo {
-  width: 75%;
   grid-column: 2;
   grid-row: 3;
+  grid-gap: 2rem;
   align-self: center;
   justify-self: center;
+  max-width: 90vw;
 }
 
-#NSCS {
-  padding: 0.3rem;
+#NSCS  {
+  --ratio:  968 / 1657;
+  --container-height: 100vh;
+  display: block;
+  width: calc(100vw * var(--ratio));
+  max-width: calc(var(--container-height) * var(--ratio) * 0.75);
+  height: 100%;
+  max-height: var(--container-height);
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /* ----Button ----*/
 #enter {
   grid-column: 2;
   grid-row: 4;
+  grid-gap: 1rem;
+  align-self: center;
+  justify-self: center;
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ----Specific Text Sections---- */
 .void {
-  color: var(--purple);
-}
-
-a:link {
-  color: var(--blue);
-  text-decoration: none;
-}
-
-a:visited {
-  color: var(--blue);
-  text-decoration: none;
-}
-
-a:active {
-  color: var(--purple);
-  text-decoration: none;
+    color: var(--purple);
 }
 
 /* ----All Buttons---- */
@@ -118,19 +124,16 @@ button {
   text-align: center;
   text-decoration: none;
   line-height: 1;
-  margin-top: 1rem;
   cursor: pointer;
-  -webkit-transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
   transition: background 250ms ease-in-out, transform 150ms ease;
 }
 
 button::-moz-selection {
-  background: var(--blue);
+  background: var(--blue); 
   color: #000000;
 }
-
 button::selection {
-  background: var(--blue);
+  background: var(--blue); 
   color: #000000;
 }
 
@@ -139,13 +142,11 @@ button:focus {
   background: rgba(84, 77, 86, 0.25);
   border-color: var(--blue);
 }
-
 button:focus {
   color: var(--blue);
   outline: none;
   border-color: var(--blue);
 }
-
 button:active {
   background: rgba(84, 77, 86, 0);
   color: var(--purple);
@@ -159,117 +160,58 @@ button:active {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.5rem;
-  padding: 0.5rem 2rem;
+  font-size: min(3vw, 3vh);
+    padding: 0.5em 2em;
+    max-height: 50%;
 }
 
 /* ----Glitch Transition Animations---- */
 .glitchAnimate {
   --glitch-width: 100%;
-  --glitch-height: 100%;
-  --gap-horizontal: 10px;
-  --gap-vertical: 5px;
-  --time-anim: 2.5s;
-  -webkit-animation-name: glitch-anim-text;
-          animation-name: glitch-anim-text;
-  -webkit-animation-duration: var(--time-anim);
-          animation-duration: var(--time-anim);
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  width: var(--glitch-width);
-  height: var(--glitch-height);
-  overflow: hidden;
-}
-
-@-webkit-keyframes glitch-anim-text {
-  0% {
-     -webkit-transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
-     transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
-    -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
-    clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
-  }
-  2% {
-    -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
-    clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
-  }
-  4% {
-    -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
-    clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
-  }
-  5% {
-    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
-    clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
-  }
-  6% {
-    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
-    clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
-  }
-  7% {
-    -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-    clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-  }
-  8% {
-    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
-    clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
-  }
-  9% {
-    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
-    clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
-  }
-  9.9% {
-     -webkit-transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
-    transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
-  }
-  10%, 100% {
-    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  }
+    --glitch-height: 100%;
+    --gap-horizontal: 10px;
+    --gap-vertical: 5px;
+    --time-anim: 2.5s;
+    animation-name: glitch-anim-text;
+    animation-duration: var(--time-anim);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    width: var(--glitch-width);
+    height: var(--glitch-height);
+    overflow: hidden;
 }
 
 @keyframes glitch-anim-text {
-  0% {
-    transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
-    -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
-    clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
-  }
-  2% {
-    -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
-    clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
-  }
-  4% {
-    -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
-    clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
-  }
-  5% {
-    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
-    clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
-  }
-  6% {
-    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
-    clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
-  }
-  7% {
-    -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-    clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-  }
-  8% {
-    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
-    clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
-  }
-  9% {
-    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
-    clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
-  }
-  9.9% {
-    transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
-  }
-  10%, 100% {
-    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  }
+    0% { 
+        transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0) scale3d(-1,-1,1);
+        clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+    }
+    2% {
+        clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+    }
+    4% {
+        clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+    }
+    5% {
+        clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+    }
+    6% {
+        clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+    }
+    7% {
+        clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+    }
+    8% {
+        clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+    }
+    9% {
+        clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+    }
+    9.9% {
+        transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0) scale3d(-1,-1,1);
+    }
+    10%, 100% {
+        transform: translate3d(0,0,0) scale3d(1,1,1);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
 }

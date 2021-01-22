@@ -99,7 +99,7 @@
 <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
   <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-  <script  src="./script.js"></script>
+  <script  src="./loginPageScript.js"></script>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 // Fancy Header //
 
-particlesJS ("headContent", 
+particlesJS ("anim", 
 {
   "particles": {
     "number": {

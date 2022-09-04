@@ -106,6 +106,17 @@ iframe {
   margin: auto;
   align-self: center;
 }
+
+.media {
+  display:block;
+  width: 95%;
+  box-shadow: 0 0 0.5rem 0.1rem rgba(120, 192, 67, 0.5);
+  border-width: 0.5px;
+  border-color: var(--green);
+  border-style: solid;
+  margin: 10px auto;
+  align-self: center;
+}
 /* ----Specific Text Sections---- */
 h1 {
   font-family: 'Montserrat Subrayada', sans-serif;
@@ -534,11 +545,11 @@ input::-moz-selection {
 
 @-webkit-keyframes flicker{
 0% {opacity:0;}
-  2%{transform:translateX(0px) skew(0deg);}
+  2% , 53%{transform:translateX(0px) skew(0deg);}
   3%{text-shadow:7px 7px 0px red;}
-  6%{text-shadow:-9px 4px 0px var(--blue); transform:translate(4px,-10px) skewX(3240deg);}
+  6%{text-shadow:-9px 4px 0px var(--blue);transform:translate(4px,-10px) skewX(3240deg);}
   7%{text-shadow:3px -4px 0px green;}
-  8%{text-shadow:0px 0px 3px var(--green); transform:translate(0px,0px) skewX(0deg);}
+  8%{text-shadow:0px 0px 3px var(--green);transform:translate(0px,0px) skewX(0deg);}
 9% {opacity:0;}
 10% {opacity:.5;}
 13% {opacity:0;}
@@ -549,14 +560,13 @@ input::-moz-selection {
 40% {opacity:.5;}
 43% {opacity:0;}
 50% {opacity:.5;}
-  53%{transform:translateX(0px) skew(0deg);}
 54% {opacity:1;}
   55%{transform:translate(-2px,6px) skew(-5530deg);}
-  56%{text-shadow:0px 0px 3px var(--green); transform:translate(0px,0px) skew(0deg);}
-  57%{text-shadow:7px 7px 0px red; transform:translate(4px,-10px) skew(-70deg);}
+  56%{text-shadow:0px 0px 3px var(--green);transform:translate(0px,0px) skew(0deg);}
+  57%{text-shadow:7px 7px 0px red;transform:translate(4px,-10px) skew(-70deg);}
 60% {opacity:0;}
-  62%{text-shadow:3px -4px 0px green; transform:translate(0px,20px) skew(0deg);}
-  63%{text-shadow:0px 0px 3px var(--green); transform:translate(4px,-2px) skew(0deg);}
+  62%{text-shadow:3px -4px 0px green;transform:translate(0px,20px) skew(0deg);}
+  63%{text-shadow:0px 0px 3px var(--green);transform:translate(4px,-2px) skew(0deg);}
   65%{transform:translate(1px,3px) skew(-230deg);}
   67%{transform:translate(-7px,2px) skew(120deg);}
   68%{transform:translate(0px,0px) skew(0deg);}
@@ -564,14 +574,14 @@ input::-moz-selection {
 70% {opacity:.5;}
 73% {opacity:0;}
   79%{transform:translate(-2px,6px) skew(5530deg);}
-  80%{text-shadow:0px 0px 3px var(--green); transform:translate(0px,0px) skew(0deg);}
+  80%{text-shadow:0px 0px 3px var(--green);transform:translate(0px,0px) skew(0deg);}
 81% {opacity:.5;}
-  82%{text-shadow:7px 7px 0px red; transform:translate(4px,-10px) skew(70deg);}
+  82%{text-shadow:7px 7px 0px red;transform:translate(4px,-10px) skew(70deg);}
 85% {opacity:1;}
 }
 @-webkit-keyframes flicker2{
 0% {opacity:0;}
-  2%{transform:translateX(0px) skew(0deg);}
+  2% , 54%{transform:translateX(0px) skew(0deg);}
   3%{text-shadow:7px 7px 0px red;}
 5% {opacity:0;}
   6%{text-shadow:-9px 4px 0px var(--blue); transform:translate(4px,-10px) skewX(3240deg);}
@@ -586,14 +596,13 @@ input::-moz-selection {
 41% {opacity:.5;}
 45% {opacity:0;}
 51% {opacity:.5;}
-  54%{transform:translateX(0px) skew(0deg);}
   55%{transform:translate(-2px,6px) skew(-5530deg);}
-  56%{text-shadow:0px 0px 3px var(--green); transform:translate(0px,0px) skew(0deg);}
-  57%{text-shadow:7px 7px 0px red; transform:translate(4px,-10px) skew(-70deg);}
-58%{text-shadow:0px 0px 3px var(--green); transform:translate(0px,0px) skew(0deg);}
+  56%{text-shadow:0px 0px 3px var(--green);transform:translate(0px,0px) skew(0deg);}
+  57%{text-shadow:7px 7px 0px red;transform:translate(4px,-10px) skew(-70deg);}
+58%{text-shadow:0px 0px 3px var(--green);transform:translate(0px,0px) skew(0deg);}
 59% {opacity:1;}
-  62%{text-shadow:3px -4px 0px green; transform:translate(0px,20px) skew(0deg);}
-  63%{text-shadow:0px 0px 3px var(--green); transform:translate(4px,-2px) skew(0deg);}
+  62%{text-shadow:3px -4px 0px green;transform:translate(0px,20px) skew(0deg);}
+  63%{text-shadow:0px 0px 3px var(--green);transform:translate(4px,-2px) skew(0deg);}
 64% {opacity:0;}
   65%{transform:translate(1px,3px) skew(-230deg);}
   67%{transform:translate(-7px,2px) skew(120deg);}
@@ -602,8 +611,8 @@ input::-moz-selection {
 76% {opacity:.5;}
 78% {opacity:0;}
   79%{transform:translate(-2px,6px) skew(5530deg);}
-  80%{text-shadow:0px 0px 3px var(--green); transform:translate(0px,0px) skew(0deg);}
-  82%{text-shadow:7px 7px 0px var(--blue); transform:translate(4px,-10px) skew(70deg);}
+  80%{text-shadow:0px 0px 3px var(--green);transform:translate(0px,0px) skew(0deg);}
+  82%{text-shadow:7px 7px 0px var(--blue);transform:translate(4px,-10px) skew(70deg);}
 84% {opacity:.5;}
 90% {opacity:1;}
 }

@@ -22,7 +22,7 @@
     
     <div id="logo">
       <section id="logoBack">
-        <a href="http://www.gigglesnort.info/"><img id="Farrago" src="/images/FarragoFuture_Logo.png" alt="Farrago Fiction logo" width="95%"></a>
+        <img id="Farrago" src="/images/FarragoFuture_Logo.png" alt="Farrago Fiction logo" width="95%">
       </section>
     </div>
     
@@ -128,7 +128,7 @@
             <br>&nbsp; Click here if you have been receiving messages from currently-dead Players.<br>
             <button class="job" type="button" onclick="addGlitch(); return false">Open Ticket</button>
             <br>&nbsp; Click here if you wish to make a general bug report.<br>
-            <button class="job" type="button" onclick="addGlitch(); return false">Press Releases</button>
+            <button class="job" type="button" onclick="prettyGlitch(); location.href='/PressReleases/';">Press Releases</button>
             <br>&nbsp; Click here if you are looking for the latest Farrago Fiction news.<br>
           </p>
         </div>
@@ -189,4 +189,3 @@
 
 </body>
 </html>
-

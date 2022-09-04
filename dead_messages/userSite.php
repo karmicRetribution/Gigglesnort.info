@@ -129,7 +129,7 @@
             <button class="job" type="button" onclick="addGlitch(); return false">Open Ticket</button>
             <br>&nbsp; Click here if you wish to make a general bug report.<br>
             <button class="job" type="button" onclick="addGlitch(); return false">Press Releases</button>
-            <br>&nbsp; Click here if you are a journalist looking for the lastest Farrago Fiction news.<br>
+            <br>&nbsp; Click here if you are looking for the latest Farrago Fiction news.<br>
           </p>
         </div>
         <form id="bugReport" action="http://fatcat-designs.com/dead_messages/bugCollection.php" method="post" target="hiddenIframe" novalidate>

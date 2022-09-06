@@ -7,7 +7,6 @@ function App() {
   const [currentEntry, setCurrent] = useState([0]);
   const [prevEntry, setPrev] = useState([]);
 
-
   function zeroPress() {
     if (currentEntry.length == 1 && currentEntry[0] == 0) {
       return;
@@ -65,6 +64,14 @@ function App() {
     }
   }
 
+  // Glitch Effects //
+  function addGlitch() {
+    var gltch = document.getElementById('glitchArea');
+    gltch.classList.add('glitchAnimate');
+    setTimeout(function () {
+      gltch.classList.remove('glitchAnimate');
+    }, 500);
+  }
 
   function equalPress() {
     let equation = prevEntry.concat(currentEntry);
@@ -85,7 +92,7 @@ function App() {
       }
     }
     let resultString = result.toString(10);
-    return answer(), updateTop(), setCurrent(resultString.split(""));
+    return answer(), updateTop(), setCurrent(resultString.split("")), addGlitch();
   }
 
   console.log("currentEntry:", currentEntry, "prevEntry:", prevEntry);
@@ -113,23 +120,11 @@ function App() {
     React.createElement("button", { id: "decimal", onClick: dotPress, className: "calcButton", type: "button" }, "."), /*#__PURE__*/
     React.createElement("button", { id: "equals", onClick: equalPress, className: "calcButton", type: "button" }, "=")));
 
-
 }
 
-
-ReactDOM.render(React.createElement(App, null), document.getElementById("page1"));
-
+ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElementById("page1"));
 
 
-// Glitch Effects //
-
-function addGlitch() {
-  var gltch = document.getElementById('glitchArea');
-  gltch.classList.add('glitchAnimate');
-  setTimeout(function () {
-    gltch.classList.remove('glitchAnimate');
-  }, 500);
-}
 
 // Fancy Header //
 
@@ -141,7 +136,6 @@ particlesJS("headContent",
       "density": {
         "enable": false,
         "value_area": 400 } },
-
 
     "color": {
       "value": "#78C043" },
@@ -201,8 +195,6 @@ particlesJS("headContent",
         "rotateX": 300,
         "rotateY": 600 } } },
 
-
-
   "interactivity": {
     "detect_on": "canvas",
     "events": {
@@ -239,7 +231,5 @@ particlesJS("headContent",
 
       "remove": {
         "particles_nb": 2 } } },
-
-
 
   "retina_detect": true });

@@ -1,0 +1,696 @@
+@charset "UTF-8";
+/* ----Small Screens---- */
+@media screen and (max-width: 700px) {
+  #gridContainer {
+    position: fixed;
+    top: 2.5vh;
+    left: 2.5vw;
+    width: 95vw;
+    height: 95vh;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 0;
+    grid-template-areas: "header header" "logo dept" "main main" "sideline sideline";
+    align-items: stretch;
+  }
+}
+/* ----Body & Background---- */
+body {
+  background: #000000;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #78C043;
+}
+
+#backGrid {
+  position: fixed;
+  top: 2vh;
+  left: 2vw;
+  height: 96vh;
+  width: 96vw;
+  background-image: url(http://fatcat-designs.com/images/green-grid2.svg);
+  background-size: 40px;
+  border: 0.5px solid rgba(120, 192, 67, 0.5);
+  box-shadow: 0 0 1rem 0.01rem rgba(120, 192, 67, 0.5) inset;
+  z-index: -10;
+}
+
+/* ----Grid Layout---- */
+#gridContainer {
+  position: fixed;
+  top: 2.5vh;
+  left: 2.5vw;
+  width: 95vw;
+  height: 95vh;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 0;
+  grid-template-rows: auto fit-content(5rem) auto;
+  row-gap: 0;
+  grid-template-areas: "logo header" "dept main" "sideline main";
+  align-items: stretch;
+}
+
+/* ----Logos---- */
+#logo {
+  width: 100%;
+  grid-area: logo;
+}
+
+#Farrago {
+  padding: 0.3rem;
+}
+
+#logoBack {
+  background: #000000;
+  border-radius: 1.5rem 0 0 0;
+  border-color: #78C043;
+  border-style: solid none none solid;
+  border-width: 0.5px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#deptLogo {
+  width: 100%;
+  grid-area: dept;
+}
+
+#NSCS {
+  padding: 0.3rem;
+  padding-top: 1rem;
+}
+
+#deptBack {
+  background: #000000;
+  border-color: #78C043;
+  border-style: none none none solid;
+  border-width: 0.5px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/* ----Headerbox---- */
+#header {
+  grid-area: header;
+  border: 0.5px solid #78C043;
+  padding: 0;
+  margin: 0;
+  background: #000000;
+  height: 100px;
+}
+
+#headContent {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* ----Sideline---- */
+#sideLine {
+  grid-area: sideline;
+  border: 0.5px solid #78C043;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.75);
+  height: 100%;
+  width: 100%;
+  padding: 0 1rem;
+  color: #42C8F4;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  z-index: 3;
+}
+
+/* ----Main Content Area---- */
+main {
+  grid-area: main;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ----Individual Content Pages---- */
+.page {
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 0.5rem 0.1rem rgba(120, 192, 67, 0.5);
+  border: 0.5px solid #78C043;
+  width: 55vw;
+  height: 70vh;
+  padding: 2rem;
+  align-self: center;
+  margin: auto;
+  overflow-y: scroll;
+}
+
+#app-box {
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 0.7rem 0.3rem rgba(120, 192, 67, 0.5);
+  border: 0.5px solid #78C043;
+  border-radius: 5px;
+  align-self: center;
+  margin: auto;
+  width: 25rem;
+  height: 35rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 0;
+  grid-template-rows: 0.75fr 1.25fr 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 0px;
+  grid-template-areas: "prev prev prev prev" "display display display display" "clear backspace divide multiply" "seven eight nine subtract" "four five six add" "one two three equals" "zero zero decimal equals";
+  align-items: stretch;
+}
+
+#prev {
+  grid-area: prev;
+  text-align: right;
+  font-size: 2rem;
+  color: #AA6DA3;
+  vertical-align: text-bottom;
+  padding: 1rem;
+}
+
+#display {
+  grid-area: display;
+  text-align: right;
+  font-size: 3rem;
+  color: #42C8F4;
+  vertical-align: text-bottom;
+  padding: 1rem;
+}
+
+.calcButton {
+  margin-top: 0;
+}
+
+#clear {
+  grid-area: clear;
+}
+
+#backspace {
+  grid-area: backspace;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#multiply {
+  grid-area: multiply;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#subtract {
+  grid-area: subtract;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#six {
+  grid-area: six;
+}
+
+#add {
+  grid-area: add;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#equals {
+  grid-area: equals;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#zero {
+  grid-area: zero;
+}
+
+#decimal {
+  grid-area: decimal;
+  font-size: 2rem;
+}
+
+/* ----Specific Text Sections---- */
+h1 {
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #42C8F4;
+  text-shadow: 0 0 0.2rem #42C8F4;
+}
+
+h1::selection {
+  background: #78C043;
+  color: #000000;
+}
+
+h1::-moz-selection {
+  background: #78C043;
+  color: #000000;
+}
+
+h2 {
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #78C043;
+  text-shadow: 0 0 0.2rem #78C043;
+}
+
+h2::selection {
+  background: #42C8F4;
+  color: #000000;
+}
+
+h2::-moz-selection {
+  background: #42C8F4;
+  color: #000000;
+}
+
+h3 {
+  color: #78C043;
+  text-shadow: 0 0 0.15rem #78C043;
+}
+
+h3::selection {
+  background: #42C8F4;
+  color: #000000;
+}
+
+h3::-moz-selection {
+  background: #42C8F4;
+  color: #000000;
+}
+
+h4 {
+  color: #42C8F4;
+}
+
+h4::selection {
+  background: #78C043;
+  color: #000000;
+}
+
+h4::-moz-selection {
+  background: #78C043;
+  color: #000000;
+}
+
+a {
+  color: #AA6DA3;
+}
+
+.sideContent {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-decoration: none;
+}
+
+.sideContent::selection {
+  background: #78C043;
+  color: #000000;
+}
+
+.sideContent::-moz-selection {
+  background: #78C043;
+  color: #000000;
+}
+
+/* ----Scrollbars---- */
+.side::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+.page::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+.side, .page {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #78C043 rgba(0, 0, 0, 0);
+}
+
+.side::-webkit-scrollbar-track, .page::-webkit-scrollbar-track {
+  margin: 1px;
+  background: rgba(0, 0, 0, 0);
+}
+
+.side::-webkit-scrollbar-corner, .page::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0);
+}
+
+.side::-webkit-scrollbar-thumb, .page::-webkit-scrollbar-thumb {
+  background-color: #78C043;
+  border-radius: 6px;
+}
+
+.side::-webkit-scrollbar-thumb {
+  border: 0px solid rgba(0, 0, 0, 0);
+}
+
+.page::-webkit-scrollbar-thumb {
+  border: 0.25rem solid black;
+}
+
+/* ----All Buttons---- */
+button {
+  position: relative;
+  padding: 0.2rem 0.3rem;
+  background: rgba(84, 77, 86, 0.5);
+  border-color: #78C043;
+  border-style: solid;
+  border-radius: 5px;
+  box-shadow: 0 0 0.5rem 0.1rem rgba(120, 192, 67, 0.5);
+  color: #42C8F4;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+}
+
+button::selection {
+  background: #42C8F4;
+  color: #000000;
+}
+
+button::-moz-selection {
+  background: #42C8F4;
+  color: #000000;
+}
+
+button:hover,
+button:focus {
+  background: rgba(84, 77, 86, 0.25);
+  border-color: #42C8F4;
+}
+
+button:focus {
+  color: #42C8F4;
+  outline: none;
+  border-color: #42C8F4;
+}
+
+button:active {
+  background: rgba(84, 77, 86, 0);
+  color: #AA6DA3;
+  box-shadow: 0 0 0.5rem 0.1rem rgba(120, 192, 67, 0.5) inset;
+}
+
+/* ----Specific Buttons---- */
+.next {
+  float: right;
+}
+
+.prev {
+  float: left;
+}
+
+/* ----Glitch Transition Animations---- */
+.glitchAnimate {
+  animation-name: glitch-anim-text;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes glitch-anim-text {
+  0% {
+    transform: translate3d(calc(-1 * $gap-horizontal), 0, 0) scale3d(-1, -1, 1);
+    -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+    clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+  }
+  2% {
+    -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+    clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+  }
+  4% {
+    -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+    clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+  }
+  5% {
+    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+    clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+  }
+  6% {
+    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+    clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+  }
+  7% {
+    -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+    clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+  }
+  8% {
+    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+    clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+  }
+  9% {
+    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+    clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+  }
+  9.9% {
+    transform: translate3d(calc(-1 * $gap-horizontal), 0, 0) scale3d(-1, -1, 1);
+  }
+  10%, 100% {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+/* ----Forms---- */
+fieldset {
+  border: none;
+}
+
+.question {
+  margin-top: 2rem;
+}
+
+.introOutro {
+  line-height: 1.25rem;
+}
+
+.introOutro::selection {
+  background: #42C8F4;
+  color: #000000;
+}
+
+.introOutro::-moz-selection {
+  background: #42C8F4;
+  color: #000000;
+}
+
+.submit-button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  float: right;
+}
+
+/* ----Checkbox Form Controls---- */
+.checkbox-labels {
+  display: block;
+  line-height: 1.7rem;
+}
+
+.checkbox-label::selection {
+  background: #42C8F4;
+  color: #000000;
+}
+
+.checkbox-label::-moz-selection {
+  background: #42C8F4;
+  color: #000000;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type=checkbox] {
+  position: relative;
+  width: 1.5rem;
+  height: 1rem;
+  border: 1.5px solid #78C043;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: #78C043;
+  transition: border-color 300ms ease-in-out, background 300ms ease-in-out;
+}
+
+input[type=checkbox]:focus {
+  outline: none;
+  border: 1.5px solid #42C8F4;
+  background: rgba(84, 77, 86, 0.25);
+}
+
+input[type=checkbox]::before {
+  content: "✔";
+  position: absolute;
+  color: #42C8F4;
+  font-size: 1.5rem;
+  left: 0.1rem;
+  top: -0.4em;
+  visibility: hidden;
+}
+
+input[type=checkbox]:checked::before {
+  /* Use `visibility` to avoid recalculating layout */
+  visibility: visible;
+}
+
+/* ----Radio Form Controls---- */
+.radio-labels {
+  display: block;
+  line-height: 2rem;
+}
+
+.radio-label::selection {
+  background: #42C8F4;
+  color: #000000;
+}
+
+.radio-label::-moz-selection {
+  background: #42C8F4;
+  color: #000000;
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type=radio] {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 1.5px solid #78C043;
+  box-shadow: 0 0 0.25rem 0.05rem rgba(120, 192, 67, 0.5) inset;
+  /* Adjusts the position of the circles on the text baseline */
+  vertical-align: -0.3rem;
+  outline: none;
+}
+
+input[type=radio]::before {
+  display: block;
+  content: " ";
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #42C8F4;
+  font-size: 1.2rem;
+  transform: translate(0.275rem, 0.275rem) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+}
+
+input[type=radio]:checked::before {
+  transform: translate(0.275rem, 0.275rem) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+/* ----Hidden Form Textfields---- */
+.reveal-if-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 1rem;
+  visibility: hidden;
+}
+input[type=radio]:checked ~ .reveal-if-active {
+  opacity: 1;
+  max-height: 5rem;
+  padding: 0 0 0 1.75rem;
+  overflow: visible;
+  visibility: visible;
+}
+
+/* ----Text Form Controls---- */
+.textbox-label {
+  line-height: 1.4rem;
+}
+
+.textbox-label::selection {
+  background: #42C8F4;
+  color: #000000;
+}
+
+.textbox-label::-moz-selection {
+  background: #42C8F4;
+  color: #000000;
+}
+
+input[type=text], input[type=number] {
+  width: 80%;
+  padding: 0.5rem;
+  border: 1px solid #78C043;
+  border-radius: 6px;
+  box-shadow: 0 0 0.5rem 0.1rem rgba(120, 192, 67, 0.5) inset;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #AA6DA3;
+  background: url(http://fatcat-designs.com/images/static%20tile.png);
+}
+
+input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(66, 200, 244, 0.75);
+}
+
+input::selection {
+  background: #78C043;
+  color: #000000;
+}
+
+input::-moz-selection {
+  background: #78C043;
+  color: #000000;
+}
